@@ -1,9 +1,15 @@
 FROM hitalos/php:latest
-LABEL maintainer="hitalos <hitalos@gmail.com>"
+LABEL maintainer="nickaguilarh <nickaguilarh@gmail.com>"
 
 # Download and install NodeJS
 ADD install-node.sh /usr/sbin/install-node.sh
 RUN /usr/sbin/install-node.sh
+
+# Install pre-required extensions libraries
+RUN apk add --update libxml2-dev
+
+# Install extensions
+RUN docker-php-ext-install soap bcmath pcntl
 
 WORKDIR /var/www
 CMD php ./artisan serve --port=80 --host=0.0.0.0
