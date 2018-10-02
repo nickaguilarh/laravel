@@ -1,6 +1,8 @@
 # Based on Hitalos/Laravel
 
-![Docker Pulls](https://img.shields.io/docker/pulls/hitalos/laravel.svg)
+![Docker Pulls](https://img.shields.io/docker/pulls/nickaguilarh/laravel.svg)
+
+![GitHub size]( https://img.shields.io/github/repo-size/nickaguilarh/laravel.svg)
 
 # laravel
 Docker image to run PHP (supporting Laravel) and Node projects.
