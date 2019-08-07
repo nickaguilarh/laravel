@@ -2,11 +2,6 @@
 FROM hitalos/php:latest
 LABEL maintainer="nickaguilarh <nickaguilarh@gmail.com>"
 
-# Download and install NodeJS
-ADD install-node.sh /usr/sbin/install-node.sh
-RUN ["chmod", "+x", "/usr/sbin/install-node.sh"]
-RUN /usr/sbin/install-node.sh
-
 # Install pre-required extensions libraries
 RUN apk add --update libxml2-dev
 
