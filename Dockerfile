@@ -11,7 +11,7 @@ RUN /usr/sbin/install-node.sh
 RUN apk add --update libxml2-dev
 
 # Install extensions
-RUN docker-php-ext-install soap bcmath pcntl
+RUN docker-php-ext-install soap bcmath pcntl imagick
 
 WORKDIR /var/www
 CMD php ./artisan serve --port=80 --host=0.0.0.0
