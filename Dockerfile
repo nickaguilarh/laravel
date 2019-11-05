@@ -10,6 +10,10 @@ RUN /usr/sbin/install.sh
 # Install pre-required extensions libraries
 RUN apk add --update libxml2-dev
 
+# Download and install NodeJS
+ADD install-node.sh /usr/sbin/install-node.sh
+RUN /usr/sbin/install-node.sh
+
 # Install extensions
 RUN docker-php-ext-install soap bcmath pcntl
 
